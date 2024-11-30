@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Music Player</title>
+  <link rel="stylesheet" href="styles.css">
+  <button id="theme-toggle" class="theme-btn">🌙</button>
+
+</head>
+<body>
+  <div class="music-player">
+    <!-- Header -->
+    <header class="player-header">
+      <h1>Pro Music Player</h1>
+    </header>
+    <div class="album-art">
+        <img id="album-art" src="placeholder.png" alt="Album Art">
+      </div>
+      
+    <!-- Song Info -->
+    <div class="song-info">
+      <h2 id="song-title">No Song Selected</h2>
+      <p id="song-artist">Artist: Unknown</p>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="audio-player"></audio>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="prev-btn">⏮</button>
+      <button id="play-btn">▶️</button>
+      <button id="pause-btn" style="display: none;">⏸</button>
+      <button id="next-btn">⏭</button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <input type="range" id="progress-bar" value="0">
+      <span id="current-time">00:00</span> / <span id="duration">00:00</span>
+    </div>
+
+    <!-- Volume Control -->
+    <div class="volume-control">
+      <label for="volume-slider">Volume:</label>
+      <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+    </div>
+
+    <!-- File Upload -->
+    <div class="upload-container">
+      <label for="file-upload" class="upload-btn">Upload Songs</label>
+      <input type="file" id="file-upload" multiple accept="audio/*" hidden>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
